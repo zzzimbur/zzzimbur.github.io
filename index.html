@@ -1,12 +1,36 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lov3 Beat</title>
+    <title>LoveBeat</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+                color: var(--tg-theme-text-color);
+                background: var(--tg-theme-bg-color);
+
+            }
+
+            #main {
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+
+            }
+        </style>
+
 </head>
     <body>
         <div id="main">
@@ -15,5 +39,6 @@
             <p>...</p>
             <button id="buy">Buy</button>
         </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </body>
 </html>
