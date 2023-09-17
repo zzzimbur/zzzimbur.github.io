@@ -51,7 +51,7 @@
 
             #form {
                 display: none;
-                text-align: none;
+                text-align: center;
             }
 
             input {
@@ -76,6 +76,7 @@
         <form>
             <input type="text" placeholder="Имя" id="user_name">
             <input type="text" placeholder="Email" id="user_email">
+            <input type="url"placeholder="Ссылка на пост и номер бита по списку" id="url">
             <button id="order">Получить</button>
         </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -87,7 +88,6 @@
         buy.addEventListener("click", () => {
           document.getElementById("main").style.display = "none";
           document.getElementById("form").style.display = "block";
-          document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " "
         });
 
         order.addEventListener("click", () => {
