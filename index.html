@@ -35,11 +35,11 @@
                 cursor: pointer;
                 transition: all 500ms ease;
                 color: var(--tg-theme-text-color);
-                bg_color: #FFFFFF;
+                bg_color: var(--tg-theme-text-color);
             }
 
             button:hover {
-                background: var(--tg-theme-bg-color);
+                bg_color: var(--tg-theme-bg-color);
             }
 
             #main {
@@ -76,7 +76,7 @@
         <form>
             <input type="text" placeholder="Имя" id="user_name">
             <input type="text" placeholder="Email" id="user_email">
-            <input type="url"placeholder="Ссылка на пост и номер бита по списку" id="url">
+            <input type="text"placeholder="Ссылка на пост и номер бита по списку" id="user_beat">
             <button id="order">Получить</button>
         </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -92,7 +92,20 @@
         });
 
         order.addEventListener("click", () => {
-           tg.close();
+            let name = document.getElementById("user_name").value;
+            let email = document.getElementById("user_email").value;
+            let beat = document.getElementById("user_beat").value;
+
+
+            let data = {
+                name: name,
+                email: email,
+                beat: beat
+            }
+            tg.setData(JSON.stringify(data));
+
+
+            tg.close();
         });
     </script>
 
