@@ -631,8 +631,8 @@
   <div class="container">
     <div class="stats-grid">
       <div class="fade-up">
-        <div class="stat-num" data-count="2">0</div>
-        <div class="stat-label">AI-проекта на GitHub</div>
+        <div class="stat-num" data-count="6">0</div>
+        <div class="stat-label">AI-проектов на GitHub</div>
       </div>
       <div class="fade-up">
         <div class="stat-num" data-count="5">0</div>
@@ -894,26 +894,128 @@
         </div>
       </div>
 
-      <!-- Проект 3: В разработке -->
-      <div class="project-card fade-up" style="border-style:dashed;opacity:.7">
+      <!-- Проект 3: Doc Extractor -->
+      <div class="project-card fade-up">
         <div class="project-meta">
-          <div class="project-icon" style="background:linear-gradient(135deg,#059669,#10b981)">🔧</div>
-          <span class="project-badge" style="color:var(--green);background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2)">В разработке</span>
+          <div class="project-icon" style="background:linear-gradient(135deg,#059669,#10b981)">📄</div>
+          <span class="project-badge">LLM · Structured Output</span>
         </div>
-        <h3 class="project-title">Structured Doc Extractor</h3>
+        <h3 class="project-title">Document Extractor</h3>
         <p class="project-desc">
-          AI-парсер документов: загружаешь договор/счёт/накладную —
-          получаешь структурированный JSON с ключевыми полями.
-          Валидация через Pydantic, REST API для интеграции.
+          AI-парсер документов: загружаешь PDF/DOCX/TXT —
+          получаешь структурированный JSON. Договоры, счета, резюме, ТЗ.
+          Авто-определение типа, REST API.
         </p>
+        <ul class="project-highlights">
+          <li><strong>5 типов документов:</strong> договор, счёт, резюме, ТЗ, авто</li>
+          <li><strong>LLM structured output</strong> + валидация Pydantic</li>
+          <li>FastAPI + Streamlit UI + скачивание JSON</li>
+        </ul>
         <div class="project-tech">
           <span class="tech-tag">Python</span>
-          <span class="tech-tag">Pydantic</span>
-          <span class="tech-tag">LLM structured output</span>
+          <span class="tech-tag">Groq / Gemini</span>
+          <span class="tech-tag">pypdf</span>
           <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Streamlit</span>
         </div>
-        <div style="margin-top:auto;padding-top:16px;color:var(--muted);font-size:0.82rem">
-          ⏳ Скоро на GitHub...
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/ai-document-extractor" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 4: LLM Eval -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)">🏆</div>
+          <span class="project-badge">LLM · Evaluation</span>
+        </div>
+        <h3 class="project-title">LLM Eval Framework</h3>
+        <p class="project-desc">
+          Сравнение качества ответов разных LLM на одних и тех же тестах.
+          LLM-as-judge метрика, радар по категориям, экспорт результатов.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>LLM-as-judge:</strong> автоматическая оценка 0–10</li>
+          <li>Radar chart по категориям, бар-чарт сравнения</li>
+          <li>Groq LLaMA · Gemma · Gemini в одном интерфейсе</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Groq</span>
+          <span class="tech-tag">Gemini</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/llm-eval-framework" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 5: Text-to-SQL -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">📊</div>
+          <span class="project-badge">LLM · SQL · Analytics</span>
+        </div>
+        <h3 class="project-title">AI Data Analyst</h3>
+        <p class="project-desc">
+          Вопросы на русском языке → SQL-запрос → результат + график + AI-инсайт.
+          Аналитика без знания SQL.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Text-to-SQL</strong> с авто-выбором типа графика</li>
+          <li>AI-инсайт по результатам запроса</li>
+          <li>Демо-БД: продажи, сотрудники, товары</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Groq / Gemini</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/ai-data-analyst" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 6: AI Agent -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">🤖</div>
+          <span class="project-badge">ReAct · Agent · Tools</span>
+        </div>
+        <h3 class="project-title">ReAct AI Agent</h3>
+        <p class="project-desc">
+          AI-агент с инструментами по паттерну ReAct.
+          Сам решает задачи: думает → выбирает инструмент → действует → отвечает.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>6 инструментов:</strong> калькулятор, поиск, анализ, код, время, память</li>
+          <li><strong>ReAct loop:</strong> Thought → Action → Observation → Answer</li>
+          <li>Live-стриминг шагов в Streamlit UI</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">ReAct pattern</span>
+          <span class="tech-tag">Groq / Gemini</span>
+          <span class="tech-tag">DuckDuckGo</span>
+          <span class="tech-tag">Streamlit</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/ai-react-agent" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
