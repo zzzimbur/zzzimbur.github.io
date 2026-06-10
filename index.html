@@ -601,9 +601,8 @@
 
     <p class="hero-desc">
       Строю <strong>LLM-приложения, RAG-системы и AI-агентов</strong> на Python.
-      6 открытых проектов на GitHub — от Telegram-бота с blended ML+LLM scoring
-      до ReAct-агента с инструментами. Учусь на <strong>AI Engineering</strong>.
-      Пишу на <strong>Хабре</strong>.
+      10 открытых проектов на GitHub — от Telegram-бота с blended ML+LLM scoring
+      до Telegram Mini App и гибридного поиска с BM25. Учусь на <strong>AI Engineering</strong>.
     </p>
 
     <div class="hero-btns">
@@ -663,10 +662,10 @@
           Строю то, что работает в продакшне и решает реальные задачи — не просто учебные демо.
         </p>
         <p class="about-text" style="color:var(--muted);line-height:1.8;margin-bottom:12px">
-          За последнее время собрал <strong style="color:var(--text)">6 открытых AI-проектов</strong>:
-          Telegram-бот с blended ML+LLM оценкой, RAG по документам, парсер документов в JSON,
+          За последнее время собрал <strong style="color:var(--text)">10 открытых AI-проектов</strong>:
+          Telegram-бот с blended ML+LLM оценкой, гибридный поиск с BM25 и RRF, RAG по документам,
+          Telegram Mini App на React + FastAPI, LLM-сортировка почты, мониторинг сайтов с LLM-diff,
           Text-to-SQL аналитик, LLM Eval Framework и ReAct-агент с инструментами.
-          Написал <strong style="color:var(--text)">техническую статью на Хабре</strong> о том, как это всё устроено.
         </p>
         <p class="about-text" style="color:var(--muted);line-height:1.8">
           Учусь на специальности <strong style="color:var(--text)">AI Engineering</strong>.
@@ -696,8 +695,8 @@
         </div>
         <div class="about-card">
           <div class="card-icon">🚀</div>
-          <div class="card-title">6 проектов на GitHub</div>
-          <div class="card-text">Бот, RAG-система, парсер документов, Text-to-SQL, Eval Framework, ReAct-агент. Статья на Хабре. Всё открытое и рабочее.</div>
+          <div class="card-title">10 проектов на GitHub</div>
+          <div class="card-text">Бот, гибридный RAG-поиск, Mini App, RAG-система, AI-сортировка почты, мониторинг сайтов, Text-to-SQL, Eval Framework, ReAct-агент. Всё открытое и рабочее.</div>
         </div>
         <div class="about-card">
           <div class="card-icon">🎓</div>
@@ -1017,6 +1016,128 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/zzzimbur/ai-react-agent" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 7: Job Radar -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#dc2626,#f97316)">🎯</div>
+          <span class="project-badge">Hybrid Search · RAG</span>
+        </div>
+        <h3 class="project-title">Job Radar</h3>
+        <p class="project-desc">
+          Гибридный RAG-поиск вакансий hh.ru под профиль кандидата.
+          Два ретривера + LLM-ранжирование с объяснением, почему стоит (или не стоит) откликаться.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>BM25 Okapi руками</strong> — ~50 строк, без ElasticSearch и библиотек</li>
+          <li><strong>Reciprocal Rank Fusion</strong> — ранги вместо сырых скоров</li>
+          <li><strong>LLM rerank</strong> — structured JSON со score и причиной</li>
+          <li><strong>Стриминг-парсер hh.ru</strong> — ~200 KB вместо мегабайта на страницу</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">BM25</span>
+          <span class="tech-tag">sentence-transformers</span>
+          <span class="tech-tag">numpy</span>
+          <span class="tech-tag">Groq / Gemini</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/job-radar" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 8: TG Stats Mini App -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#2563eb,#38bdf8)">📊</div>
+          <span class="project-badge">Mini App · Fullstack</span>
+        </div>
+        <h3 class="project-title">TG Stats Mini App</h3>
+        <p class="project-desc">
+          Telegram Mini App — дашборд статистики Freelance Monitor Bot.
+          React-фронт открывается прямо в Telegram, FastAPI отдаёт живые данные бота.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>HMAC-SHA256 валидация initData</strong> + защита от replay-атак</li>
+          <li><strong>Нативная темизация</strong> через CSS-переменные Telegram</li>
+          <li><strong>React 18 + Vite + FastAPI</strong> — фуллстек в одном репо</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Vite</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Telegram WebApp API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/tg-stats-miniapp" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 9: AI Mail Digest -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#9333ea,#c084fc)">📬</div>
+          <span class="project-badge">LLM · Automation</span>
+        </div>
+        <h3 class="project-title">AI Mail Digest</h3>
+        <p class="project-desc">
+          LLM-сортировка входящей почты: категория, приоритет, саммари
+          и действие по каждому письму. Дайджест в Telegram по cron.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Батчевая классификация</strong> — 1 запрос на 10 писем</li>
+          <li><strong>Structured output</strong> — строгий JSON, парсер устойчив к обёрткам</li>
+          <li><strong>IMAP readonly</strong> — письма не помечаются прочитанными</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">IMAP</span>
+          <span class="tech-tag">httpx</span>
+          <span class="tech-tag">Groq / Gemini</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/ai-mail-digest" target="_blank" class="project-link link-github">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Проект 10: Site Watcher -->
+      <div class="project-card fade-up">
+        <div class="project-meta">
+          <div class="project-icon" style="background:linear-gradient(135deg,#0d9488,#2dd4bf)">🔭</div>
+          <span class="project-badge">Monitoring · LLM Diff</span>
+        </div>
+        <h3 class="project-title">Site Watcher</h3>
+        <p class="project-desc">
+          Мониторинг изменений на страницах с LLM-описанием по-человечески:
+          «Тариф Pro подорожал с 990 до 1290 руб» вместо сырого diff.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Хэш-фильтр</strong> — большинство проверок без вызова LLM</li>
+          <li><strong>LLM-шумодав</strong> — счётчики и даты отсеиваются сами</li>
+          <li><strong>Зона наблюдения</strong> — мониторинг части страницы по hint</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">difflib</span>
+          <span class="tech-tag">httpx</span>
+          <span class="tech-tag">Groq / Gemini</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/zzzimbur/site-watcher" target="_blank" class="project-link link-github">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
             GitHub
           </a>
